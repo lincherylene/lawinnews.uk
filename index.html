@@ -64,13 +64,14 @@
             width: 100%;
         }
 
-        /* Individual Article Square Card */
+        /* Individual Article Square Card (Styled Link) */
         .article-card {
             background-color: #ffffff;
             border-radius: 8px;
             padding: 24px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            cursor: pointer;
+            text-decoration: none; /* Removes underline from links */
+            color: inherit;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
             flex-direction: column;
@@ -105,61 +106,6 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        /* Modal Popup Styling for Reading Articles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            max-width: 600px;
-            width: 100%;
-            position: relative;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            font-family: "Cormorant Garamond", serif;
-        }
-
-        .modal-title {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-
-        .modal-body {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #333333;
-            margin-bottom: 20px;
-        }
-
-        .close-btn {
-            background-color: #333333;
-            color: #ffffff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: system-ui, sans-serif;
-            font-size: 14px;
-        }
-
-        .close-btn:hover {
-            background-color: #555555;
-        }
     </style>
 </head>
 <body>
@@ -169,59 +115,32 @@
         <p class="sub-heading">by cherylene lin</p>
     </div>
 
-    <!-- Three Article Squares -->
+    <!-- Three Article Squares Linking to New Pages -->
     <div class="articles-container">
-        <div class="article-card" onclick="openModal('Supreme Court Landmark Ruling', 'Today, the Supreme Court delivered a groundbreaking verdict regarding digital privacy rights, altering how tech companies handle consumer data across borders. Legal experts are calling this decision a watershed moment for the digital age...')">
+        <a href="article1.html" class="article-card">
             <div>
                 <h2 class="article-title">Supreme Court Landmark Ruling</h2>
                 <p class="article-snippet">Today, the Supreme Court delivered a groundbreaking verdict regarding digital privacy rights...</p>
             </div>
             <span class="read-more">Read Article &rarr;</span>
-        </div>
+        </a>
 
-        <div class="article-card" onclick="openModal('New Environmental Regulations', 'Governments worldwide have introduced stringent new compliance frameworks for industrial emissions. Corporations now face heavier accountability standards, shifting the focus toward strict liability environmental law...')">
+        <a href="article2.html" class="article-card">
             <div>
                 <h2 class="article-title">New Environmental Regulations</h2>
                 <p class="article-snippet">Governments worldwide have introduced stringent new compliance frameworks for industrial emissions...</p>
             </div>
             <span class="read-more">Read Article &rarr;</span>
-        </div>
+        </a>
 
-        <div class="article-card" onclick="openModal('AI & Intellectual Property Law', 'As generative artificial intelligence continues to expand, courts are grappling with unprecedented copyright and ownership cases. This article explores the evolving legal definitions surrounding AI-generated creations...')">
+        <a href="article3.html" class="article-card">
             <div>
                 <h2 class="article-title">AI & Intellectual Property Law</h2>
                 <p class="article-snippet">As generative artificial intelligence continues to expand, courts are grappling with unprecedented copyright...</p>
             </div>
             <span class="read-more">Read Article &rarr;</span>
-        </div>
+        </a>
     </div>
-
-    <!-- Modal Popup Box -->
-    <div id="articleModal" class="modal" onclick="closeModalOnBackground(event)">
-        <div class="modal-content">
-            <h2 id="modalTitle" class="modal-title"></h2>
-            <p id="modalBody" class="modal-body"></p>
-            <button class="close-btn" onclick="closeModal()">Close</button>
-        </div>
-    </div>
-
-    <script>
-        function openModal(title, text) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalBody').innerText = text;
-            document.getElementById('articleModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('articleModal').style.display = 'none';
-        }
-
-        function closeModalOnBackground(event) {
-            if (event.target.id === 'articleModal') {
-                closeModal();
-            }
-        }
-    </script>
 
 </body>
 </html>
