@@ -1,2 +1,1 @@
-Law in News
-A public legal news website developed by Cherylene Lin.
+law in news, a website developed by cherylene lin.
