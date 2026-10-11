@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures compatibility with older Internet Explorer browsers -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <title>Law in News</title>
     
+    <!-- Google Fonts Imports for Dr Sugiyama and Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Dr+Sugiyama&display=swap" rel="stylesheet">
     
     <style>
+        /* CSS Reset to ensure consistent default margins and padding across all browsers */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -30,27 +34,26 @@
             padding: 20px;
         }
 
+        /* Wrapper for the headings */
         .header-container {
             text-align: center;
             max-width: 800px;
             width: 100%;
         }
 
-        /* Main Heading Styling */
+        /* Main Heading Styling: Dr Sugiyama, 40px, Black, Centered */
         .main-heading {
-            /* Using Kapakana with serif/sans-serif fallbacks */
-            font-family: "Dr Sugiyama", serif;
+            font-family: "Dr Sugiyama", cursive, serif;
             font-size: 40px;
-            font-weight: 700;
+            font-weight: 400;
             color: #000000;
             margin-bottom: 0.5rem;
             line-height: 1.2;
             text-align: center;
         }
 
-        /* Subheading Styling */
+        /* Subheading Styling: Cormorant Garamond, 22px, Black, Centered */
         .sub-heading {
-            /* Using Cormorant Garamond with serif fallback */
             font-family: "Cormorant Garamond", serif;
             font-size: 22px;
             font-weight: 400;
